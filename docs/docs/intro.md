@@ -2,46 +2,42 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# 🚀 Physical AI Hackathon Project: Textbook Overview
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Let's explore the **Physical AI & Humanoid Robotics** textbook modules.
 
-## Getting Started
+---
 
-Get started by **creating a new site**.
+## 1. Project Specifications and Blueprint
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+This project is a **Spec-Driven, AI-Native** textbook built using **Claude Code API** and the **Spec-Kit Plus** methodology.
 
-### What you'll need
+You can view the detailed architecture and file organization that guided the generation of all content:
+* [**View Project SPEC.md on GitHub**](https://github.com/iamanum/physical-ai-textbook/blob/master/SPEC.md)
 
-- [Node.js](https://nodejs.org/en/download/) version 20.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+## 2. Embodied Intelligence Modules (Course Structure)
 
-## Generate a new site
+The course covers four main pillars of Embodied Intelligence:
+1. **The Robotic Nervous System** (ROS 2)
+2. **The Digital Twin** (Simulation)
+3. **The AI-Robot Brain** (NVIDIA Isaac)
+4. **Vision-Language-Action** (VLA)
 
-Generate a new Docusaurus site using the **classic template**.
+---
 
-The classic template will automatically be added to your project after you run the command:
+## 🤖 Ask the Physical AI Assistant (RAG Chatbot)
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+Yeh Chatbot aapki kitaab ke content (Modules 1-4) se **Retrieval-Augmented Generation (RAG)** use karke jawab deta hai.
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+**Features:**
+* Answers questions using **only** the indexed content.
+* Supports **Selected Text** functionality (try highlighting text on this page and then typing a question).
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+**Try karain:**
+1. "Define Embodied Intelligence based on the textbook."
+2. "What are the core components of a ROS 2 Node?"
+3. "Explain the difference between a ROS 2 Service and Action."
 
-## Start your site
+import RAGChatbot from '@site/src/components/RAGChatbot';
 
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+<RAGChatbot />

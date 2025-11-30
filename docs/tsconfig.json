@@ -1,8 +1,11 @@
+// docs/tsconfig.json
 {
   // This file is not used in compilation. It is here just for a nice editor experience.
   "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
-    "baseUrl": "."
+    "baseUrl": ".",
+    // FIX: Yeh line TypeScript compiler warning ko hata degi
+    "ignoreDeprecations": "6.0" 
   },
   "exclude": [".docusaurus", "build"]
 }
