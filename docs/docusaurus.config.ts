@@ -14,11 +14,11 @@ const config: Config = {
   url: 'https://iamanum.github.io', 
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it's often '/<projectName>/'
-  baseUrl: 'physical-ai-textbook', 
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you use GitHub pages, here is where to set them up.
-  organizationName: '/physical-ai-textbook/',
+  organizationName: 'iamanum',
   projectName: 'physical-ai-textbook',
   deploymentBranch: 'gh-pages', // GitHub Pages deployment branch (Aksar yeh 'gh-pages' hota hai)
 
