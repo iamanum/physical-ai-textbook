@@ -7,9 +7,7 @@ Every simulation environment, including **Gazebo** and **NVIDIA Isaac Sim**, rel
 To ensure **Sim-to-Real** transfer works—meaning the robot learns realistically in simulation—the physics parameters must be tuned correctly.
 
 ### A. Gravity
-The standard gravity vector is \$\vec{g} = (0, 0, -9.81) \text{ m/s}^2\$ (for the Z-axis down). // <--- FINAL FIX HERE
-// Humne '$' sign se pehle '\' lagaya hai.
-
+The standard gravity vector is `$\vec{g} = (0, 0, -9.81) \text{ m/s}^2$` (for the Z-axis down). // **FINAL FIX: Inline Code Block use kiya**
 
 ### B. Inertia and Mass
 The robot's links must have accurate **mass** and **moment of inertia** defined in the URDF/SDF. If the mass or inertia tensor is incorrect, the robot's balance control (Module 4) will fail in both simulation and reality.

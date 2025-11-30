@@ -10,17 +10,22 @@ const config: Config = {
   
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
+  // FIX: GitHub Pages deployment ke liye zaroori (Final Deployed URL)
   url: 'https://iamanum.github.io', 
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it's often '/<projectName>/'
-  baseUrl: '/',
+  
+  // FIX: Local testing ke liye '/' (aur deployment ke liye /repo-name/)
+  // Jab deploy karenge, Docusaurus khud hi isko /physical-ai-textbook/ kar dega.
+  // Lekin, hume locally kaam karne ke liye / hi rakhna chahiye, aur deploy ke waqt change karna zaroori hai.
+  // HUM ISKO '/' RAKHTE HAIN, AUR DEPLOYMENT COMMAND KO CUSTOMIZE KARENGE.
+  baseUrl: '/', 
 
   // GitHub pages deployment config.
-  // If you use GitHub pages, here is where to set them up.
-  organizationName: 'iamanum',
-  projectName: 'physical-ai-textbook',
-  deploymentBranch: 'gh-pages', // GitHub Pages deployment branch (Aksar yeh 'gh-pages' hota hai)
+  organizationName: 'iamanum', // Aapka GitHub Username
+  projectName: 'physical-ai-textbook', // Aapka Repo Name
+  deploymentBranch: 'gh-pages', // GitHub Pages deployment branch
+
+  // FIX: Trailing Slash Warning/Error (GitHub Pages ke liye zaroori)
+  trailingSlash: false, 
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -30,7 +35,7 @@ const config: Config = {
   // to set htmlLang: 'zh-Hans'.
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'], // Urdu translation ke liye hum yahan 'ur' add kareinge, lekin abhi nahi
+    locales: ['en'], 
   },
 
   presets: [
@@ -39,9 +44,10 @@ const config: Config = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/iamanum/physical-ai-textbook/tree/main/docs/', 
+            'https://github.com/iamanum/physical-ai-textbook/tree/master/docs/', 
         },
         blog: false, // Blog band kar rahe hain, kyunki yeh sirf textbook hai
         theme: {
