@@ -4,12 +4,12 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 export default [
   {
     path: '/physical-ai-textbook/search',
-    component: ComponentCreator('/physical-ai-textbook/search', '9b4'),
+    component: ComponentCreator('/physical-ai-textbook/search', 'd5c'),
     exact: true
   },
   {
     path: '/physical-ai-textbook/search',
-    component: ComponentCreator('/physical-ai-textbook/search', 'd5c'),
+    component: ComponentCreator('/physical-ai-textbook/search', '9b4'),
     exact: true
   },
   {

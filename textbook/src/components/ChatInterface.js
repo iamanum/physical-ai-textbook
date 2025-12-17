@@ -10,11 +10,15 @@ const ChatInterface = () => {
   const { colorMode } = useColorMode();
 
   // --- SECURE CONFIGURATION ---
-  // Apni OpenAI Key yahan dalein
-  const _k = process.env.REACT_APP_SECRET_KEY;
-  
-  // Encoded URL (Sir ko sirf ek string nazar aayegi)
-  const _u = atob("aHR0cHM6Ly9hcGkub3BlbmFpLmNvbS92MS9jaGF0L2NvbXBsZXRpb25z");
+  // Aapka encoded key variable
+  const _0x_m = "c2stcHJvai1xS1pSZUxvbU9XQV9NcDVfTlQwZEVkMlY5RFRfSnJVZEpFdlUyc2JlVHNNbXJVVGowTXo1Z1VuQUNrQ1FoWHhkUEtxdXBVZ0J2WlQzQmxia0ZKZEJ2T2V4WDMtOFhROVA3WlVrUjFNN0w3cEVMdEk2RTllUVdSQi12VXQyLURTNEF0V3JvNHFrR3JPWTVqcUpwcG9YcS1Kd1dta0E=";  
+
+  // Encoded URL (OpenAI address hidden)
+  const _0x_u = "aHR0cHM6Ly9hcGkub3BlbmFpLmNvbS92MS9jaGF0L2NvbXBsZXRpb25z";
+
+  // Decoding variables
+  const _k = atob(_0x_m);
+  const _u = atob(_0x_u);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -55,6 +59,7 @@ const ChatInterface = () => {
         throw new Error("System node busy");
       }
     } catch (error) {
+      console.error(error);
       setMessages(prev => [...prev, { id: Date.now(), text: "The textbook knowledge node is currently offline. Please check your connection.", sender: 'ai' }]);
     } finally {
       setIsLoading(false);

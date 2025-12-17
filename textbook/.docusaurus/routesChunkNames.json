@@ -1,16 +1,16 @@
 {
-  "/physical-ai-textbook/search-9b4": {
-    "__comp": "1a4e3797",
-    "__context": {
-      "plugin": "50f9a59d"
-    }
-  },
   "/physical-ai-textbook/search-d5c": {
     "__comp": "18c5a93e",
     "__context": {
       "plugin": "7f55f431"
     },
     "config": "5e9f5e1a"
+  },
+  "/physical-ai-textbook/search-9b4": {
+    "__comp": "1a4e3797",
+    "__context": {
+      "plugin": "50f9a59d"
+    }
   },
   "/physical-ai-textbook/docs-7f2": {
     "__comp": "1be78505",
