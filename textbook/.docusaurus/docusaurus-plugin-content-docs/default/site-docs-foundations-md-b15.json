@@ -1,0 +1,32 @@
+{
+  "unversionedId": "foundations",
+  "id": "foundations",
+  "title": "Foundations of Physical AI and Robotics",
+  "description": "Explore the foundational concepts of Physical AI and Robotics",
+  "source": "@site/docs/foundations.md",
+  "sourceDirName": ".",
+  "slug": "/foundations",
+  "permalink": "/physical-ai-textbook/docs/foundations",
+  "draft": false,
+  "editUrl": "https://github.com/iamanum/physical-ai-textbook/edit/main/textbook/docs/foundations.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_label": "Foundations",
+    "sidebar_position": 2,
+    "title": "Foundations of Physical AI and Robotics",
+    "description": "Explore the foundational concepts of Physical AI and Robotics"
+  },
+  "sidebar": "textbookSidebar",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/physical-ai-textbook/docs/introduction"
+  },
+  "next": {
+    "title": "Locomotion Systems",
+    "permalink": "/physical-ai-textbook/docs/locomotion"
+  }
+}

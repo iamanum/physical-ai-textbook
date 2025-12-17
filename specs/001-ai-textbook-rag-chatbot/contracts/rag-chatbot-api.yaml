@@ -1,0 +1,219 @@
+# API Contract: RAG Chatbot for Physical AI & Humanoid Robotics Textbook
+
+**Feature**: 001-ai-textbook-rag-chatbot
+**Version**: 1.0
+**Date**: 2025-12-07
+
+## Overview
+
+This document defines the API contracts for the Retrieval-Augmented Generation (RAG) chatbot functionality in the Physical AI & Humanoid Robotics textbook project. The API enables users to ask questions about textbook content and receive AI-generated responses based on the available material.
+
+## Base URL
+
+```
+https://api.physical-ai-textbook.com/v1
+```
+
+## Authentication
+
+All endpoints require authentication via Bearer token:
+
+```
+Authorization: Bearer {API_TOKEN}
+```
+
+## Endpoints
+
+### 1. Ask Question
+
+Submit a question about the textbook content and receive an AI-generated response.
+
+- **Endpoint**: `POST /chat`
+- **Description**: Process a user question against textbook content and return an AI-generated answer with source citations.
+
+#### Request
+
+```json
+{
+  "question": "What are the key principles of humanoid robot locomotion?",
+  "sessionId": "session-12345",
+  "context": {
+    "selectedText": "optional text the user highlighted before asking",
+    "chapterId": "optional chapter the user was viewing"
+  }
+}
+```
+
+#### Response
+
+```json
+{
+  "id": "response-67890",
+  "questionId": "question-12345",
+  "answer": "The key principles of humanoid robot locomotion include: 1) Zero Moment Point (ZMP) control for maintaining balance, 2) Dynamic walking algorithms that adapt to terrain, 3) Feedback control systems that adjust to disturbances, and 4) Biomimetic approaches inspired by human walking patterns.",
+  "sources": [
+    {
+      "contentId": "content-abc123",
+      "chapter": "Chapter 5: Locomotion Systems",
+      "url": "/docs/locomotion#section-3"
+    }
+  ],
+  "confidence": 0.89,
+  "timestamp": "2025-12-07T10:30:00Z"
+}
+```
+
+#### Error Responses
+
+```json
+{
+  "error": {
+    "code": "NO_RELEVANT_CONTENT",
+    "message": "Unable to find relevant content in the textbook to answer this question."
+  }
+}
+```
+
+```json
+{
+  "error": {
+    "code": "INVALID_REQUEST",
+    "message": "Question must be between 10 and 500 characters."
+  }
+}
+```
+
+### 2. Search Textbook
+
+Search for specific content within the textbook using keywords.
+
+- **Endpoint**: `GET /search`
+- **Description**: Search textbook content using keywords and return relevant sections.
+
+#### Query Parameters
+
+- `q` (required): Search query (1-200 characters)
+- `limit` (optional): Maximum number of results (default: 10, max: 50)
+- `sessionId` (optional): Session identifier for analytics
+
+#### Response
+
+```json
+{
+  "query": "humanoid robot locomotion",
+  "results": [
+    {
+      "id": "content-abc123",
+      "title": "Locomotion Systems in Humanoid Robots",
+      "chapter": "Chapter 5: Locomotion Systems",
+      "excerpt": "Humanoid robot locomotion is a complex system that mimics human walking patterns...",
+      "url": "/docs/locomotion#section-3",
+      "relevance": 0.92
+    }
+  ],
+  "totalResults": 1,
+  "searchId": "search-45678"
+}
+```
+
+### 3. Get Textbook Chapters
+
+Retrieve a list of all available textbook chapters.
+
+- **Endpoint**: `GET /chapters`
+- **Description**: Get metadata for all textbook chapters.
+
+#### Response
+
+```json
+{
+  "chapters": [
+    {
+      "id": "ch1-intro",
+      "title": "Introduction to Physical AI",
+      "slug": "introduction",
+      "order": 1,
+      "sections": 5,
+      "wordCount": 4250,
+      "readingTime": 17,
+      "description": "Overview of Physical AI concepts and applications"
+    }
+  ]
+}
+```
+
+### 4. Get Chapter Content
+
+Retrieve content for a specific chapter.
+
+- **Endpoint**: `GET /chapters/{chapterId}`
+- **Description**: Get detailed content for a specific textbook chapter.
+
+#### Path Parameters
+
+- `chapterId`: Unique identifier for the chapter
+
+#### Response
+
+```json
+{
+  "id": "ch1-intro",
+  "title": "Introduction to Physical AI",
+  "content": "# Introduction to Physical AI\n\nPhysical AI represents the intersection of artificial intelligence and robotics...",
+  "sections": [
+    {
+      "id": "section1",
+      "title": "What is Physical AI?",
+      "content": "Physical AI involves the integration of AI algorithms with physical systems..."
+    }
+  ],
+  "relatedChapters": ["ch2-foundations", "ch3-applications"],
+  "wordCount": 4250,
+  "readingTime": 17
+}
+```
+
+### 5. Submit Feedback
+
+Submit feedback on the quality of an AI response.
+
+- **Endpoint**: `POST /feedback`
+- **Description**: Provide feedback on the relevance and accuracy of an AI response.
+
+#### Request
+
+```json
+{
+  "responseId": "response-67890",
+  "rating": 1,  // 1 (negative) or 5 (positive)
+  "comment": "This response was very helpful and accurate."
+}
+```
+
+#### Response
+
+```json
+{
+  "status": "feedback submitted",
+  "responseId": "response-67890"
+}
+```
+
+## Error Codes
+
+| Code | Description |
+|------|-------------|
+| `INVALID_REQUEST` | Request parameters are invalid |
+| `NO_RELEVANT_CONTENT` | No content in textbook matches the query |
+| `RESOURCE_NOT_FOUND` | Requested resource does not exist |
+| `RATE_LIMIT_EXCEEDED` | Request limit exceeded for the API key |
+| `INTERNAL_ERROR` | An unexpected error occurred on the server |
+
+## Rate Limits
+
+- 100 requests per minute per API key
+- 1000 requests per hour per API key
+
+## Versioning
+
+This API follows semantic versioning. Breaking changes will increment the major version number (e.g., v1.x.x to v2.x.x).

@@ -1,0 +1,28 @@
+{
+  "unversionedId": "hri",
+  "id": "hri",
+  "title": "Human-Robot Interaction and Social Robotics",
+  "description": "Understanding human-robot interaction principles and social robotics applications",
+  "source": "@site/docs/hri.md",
+  "sourceDirName": ".",
+  "slug": "/hri",
+  "permalink": "/physical-ai-textbook/docs/hri",
+  "draft": false,
+  "editUrl": "https://github.com/iamanum/physical-ai-textbook/edit/main/textbook/docs/hri.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_label": "Human-Robot Interaction",
+    "sidebar_position": 5,
+    "title": "Human-Robot Interaction and Social Robotics",
+    "description": "Understanding human-robot interaction principles and social robotics applications"
+  },
+  "sidebar": "textbookSidebar",
+  "previous": {
+    "title": "Manipulation Systems",
+    "permalink": "/physical-ai-textbook/docs/manipulation"
+  }
+}

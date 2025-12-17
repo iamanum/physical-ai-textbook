@@ -1,0 +1,99 @@
+{
+  "/physical-ai-textbook/__docusaurus/debug-8bc": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---physical-ai-textbook-docusaurus-debugdd-9-7e3"
+    }
+  },
+  "/physical-ai-textbook/__docusaurus/debug/config-ad1": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---physical-ai-textbook-docusaurus-debugdd-9-7e3"
+    }
+  },
+  "/physical-ai-textbook/__docusaurus/debug/content-29c": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---physical-ai-textbook-docusaurus-debugdd-9-7e3"
+    },
+    "allContent": "allContent---physical-ai-textbook-docusaurus-debug-content-246-42a"
+  },
+  "/physical-ai-textbook/__docusaurus/debug/globalData-3a7": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---physical-ai-textbook-docusaurus-debugdd-9-7e3"
+    }
+  },
+  "/physical-ai-textbook/__docusaurus/debug/metadata-868": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---physical-ai-textbook-docusaurus-debugdd-9-7e3"
+    }
+  },
+  "/physical-ai-textbook/__docusaurus/debug/registry-b51": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---physical-ai-textbook-docusaurus-debugdd-9-7e3"
+    }
+  },
+  "/physical-ai-textbook/__docusaurus/debug/routes-6ce": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---physical-ai-textbook-docusaurus-debugdd-9-7e3"
+    }
+  },
+  "/physical-ai-textbook/search-d5c": {
+    "__comp": "__comp---site-src-pages-search-js-18-c-30a",
+    "__context": {
+      "plugin": "plugin---physical-ai-textbook-search-7-f-5-d9f"
+    },
+    "config": "config---physical-ai-textbook-search-5-e-9-4b6"
+  },
+  "/physical-ai-textbook/search-9b4": {
+    "__comp": "__comp---theme-search-page-1-a-4-d6f",
+    "__context": {
+      "plugin": "plugin---physical-ai-textbook-search-50-f-961"
+    }
+  },
+  "/physical-ai-textbook/docs-7f2": {
+    "__comp": "__comp---theme-doc-page-1-be-9be",
+    "__context": {
+      "plugin": "plugin---physical-ai-textbook-docs-01-c-38d"
+    },
+    "versionMetadata": "versionMetadata---physical-ai-textbook-docs-935-f69"
+  },
+  "/physical-ai-textbook/docs/foundations-5f6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---physical-ai-textbook-docs-foundationsb-15-5c1"
+  },
+  "/physical-ai-textbook/docs/hri-616": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---physical-ai-textbook-docs-hri-159-de0"
+  },
+  "/physical-ai-textbook/docs/introduction-6b1": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---physical-ai-textbook-docs-introductiona-09-a50"
+  },
+  "/physical-ai-textbook/docs/locomotion-886": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---physical-ai-textbook-docs-locomotion-384-67d"
+  },
+  "/physical-ai-textbook/docs/manipulation-720": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---physical-ai-textbook-docs-manipulation-0-d-7-5c9"
+  },
+  "/physical-ai-textbook/-85f": {
+    "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",
+    "__context": {
+      "plugin": "plugin---physical-ai-textbook-search-7-f-5-d9f"
+    },
+    "config": "config---physical-ai-textbook-search-5-e-9-4b6"
+  },
+  "/physical-ai-textbook/-31b": {
+    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
+    "__context": {
+      "plugin": "plugin---physical-ai-textbook-search-7-f-5-d9f"
+    },
+    "content": "content---physical-ai-textbook-f-39-f40"
+  }
+}
