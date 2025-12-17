@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkphysical_ai_textbook=globalThis.webpackChunkphysical_ai_textbook||[]).push([[638],{1142:a=>{a.exports=JSON.parse('{"name":"@easyops-cn/docusaurus-search-local","id":"default"}')}}]);
