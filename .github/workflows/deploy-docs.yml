@@ -1,0 +1,44 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ master ] 
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+        cache: 'npm'
+        # textbook folder ke andar se lock file check karega
+        cache-dependency-path: 'textbook/package-lock.json'
+
+    - name: Install Docusaurus dependencies
+      run: |
+        cd textbook
+        npm install
+
+    - name: Build Docusaurus site
+      run: |
+        cd textbook
+        npm run build
+      env:
+        # Chatbot connection ke liye environment variable
+        REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL || 'https://api.example.com' }}
+
+    - name: Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/main'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        # Build folder ka sahi path (textbook folder ke andar build banta hai)
+        publish_dir: ./textbook/build

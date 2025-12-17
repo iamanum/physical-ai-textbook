@@ -1,0 +1,174 @@
+/**
+ * ANUM AI PORTAL - NEXT GEN UI (WOW FACTOR)
+ * Is theme mein hum animated gradients aur glass cards use kar rahe hain.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Space+Grotesk:wght@500;700&display=swap');
+
+:root {
+  --ifm-color-primary: #2dd4bf;
+  --panel-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme='dark'] {
+  --panel-bg: rgba(15, 23, 42, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.05);
+}
+
+/* --- Animated Professional Background --- */
+.heroBanner_src-pages-index-module {
+  background: linear-gradient(-45deg, #0f172a, #134e4a, #020617, #1e293b) !important;
+  background-size: 400% 400% !important;
+  animation: gradientBG 15s ease infinite !important;
+  border-bottom: 1px solid var(--glass-border);
+  position: relative;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* --- Hero Text Styling --- */
+.hero__title {
+  font-family: 'Space Grotesk', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(to right, #fff, #2dd4bf);
+  /* Fixed Compatibility Below */
+  -webkit-background-clip: text;
+  background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  display: inline-block; /* Behtareen clipping ke liye */
+}
+
+/* --- Glassmorphism Cards --- */
+.card {
+  background: var(--panel-bg) !important;
+  backdrop-filter: blur(12px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(180%) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.02);
+  border-color: var(--ifm-color-primary) !important;
+  box-shadow: 0 25px 50px -12px rgba(45, 212, 191, 0.25) !important;
+}
+
+/* --- Professional Navigation Blur --- */
+.navbar {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: transparent !important;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+/**
+ * ANUM AI - PREMIUM CHATBOT UI
+ */
+
+.chatbot-container {
+  border-radius: 20px !important;
+  overflow: hidden;
+  border: 1px solid rgba(45, 212, 191, 0.3) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  background: rgba(15, 23, 42, 0.9) !important;
+}
+
+.chatbot-header {
+  background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%) !important;
+  padding: 15px !important;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.chatbot-message-user {
+  background-color: #1e293b !important;
+  color: white !important;
+  border-radius: 15px 15px 0 15px !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chatbot-message-ai {
+  background: rgba(45, 212, 191, 0.1) !important;
+  color: #2dd4bf !important;
+  border-radius: 15px 15px 15px 0 !important;
+  border: 1px solid rgba(45, 212, 191, 0.2);
+}
+
+.chatbot-input {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(45, 212, 191, 0.2) !important;
+  border-radius: 10px !important;
+  color: white !important;
+  padding: 10px 15px !important;
+}
+
+.chatbot-float-btn {
+  width: 65px !important;
+  height: 65px !important;
+  background: linear-gradient(135deg, #2dd4bf 0%, #14b8a6 100%) !important;
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.5) !important;
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0% { transform: scale(1); box-shadow: 0 0 10px rgba(45, 212, 191, 0.4); }
+  50% { transform: scale(1.05); box-shadow: 0 0 25px rgba(45, 212, 191, 0.7); }
+  100% { transform: scale(1); box-shadow: 0 0 10px rgba(45, 212, 191, 0.4); }
+}
+
+/**
+ * ANUM AI - PREMIUM DOCS UI
+ */
+
+.theme-doc-sidebar-container {
+  background: rgba(15, 23, 42, 0.03) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-right: 1px solid rgba(45, 212, 191, 0.1) !important;
+}
+
+.menu__link--active {
+  background: linear-gradient(90deg, rgba(20, 184, 166, 0.1) 0%, transparent 100%) !important;
+  color: #14b8a6 !important;
+  border-left: 4px solid #14b8a6;
+  font-weight: 700 !important;
+}
+
+.theme-doc-markdown h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #0f172a, #14b8a6);
+  /* Fixed Compatibility Below */
+  -webkit-background-clip: text;
+  background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+  display: block;
+}
+
+[data-theme='dark'] .theme-doc-markdown h1 {
+  background: linear-gradient(to right, #ffffff, #2dd4bf);
+  /* Fixed Compatibility Below */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pagination-nav__link {
+  border: 1px solid rgba(45, 212, 191, 0.2) !important;
+  border-radius: 16px !important;
+  background: var(--card-bg) !important;
+  transition: all 0.3s ease;
+}

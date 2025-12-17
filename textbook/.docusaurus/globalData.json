@@ -1,0 +1,53 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/physical-ai-textbook/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/physical-ai-textbook/docs",
+          "mainDocId": "introduction",
+          "docs": [
+            {
+              "id": "foundations",
+              "path": "/physical-ai-textbook/docs/foundations",
+              "sidebar": "textbookSidebar"
+            },
+            {
+              "id": "hri",
+              "path": "/physical-ai-textbook/docs/hri",
+              "sidebar": "textbookSidebar"
+            },
+            {
+              "id": "introduction",
+              "path": "/physical-ai-textbook/docs/introduction",
+              "sidebar": "textbookSidebar"
+            },
+            {
+              "id": "locomotion",
+              "path": "/physical-ai-textbook/docs/locomotion",
+              "sidebar": "textbookSidebar"
+            },
+            {
+              "id": "manipulation",
+              "path": "/physical-ai-textbook/docs/manipulation",
+              "sidebar": "textbookSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "textbookSidebar": {
+              "link": {
+                "path": "/physical-ai-textbook/docs/introduction",
+                "label": "Getting Started"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

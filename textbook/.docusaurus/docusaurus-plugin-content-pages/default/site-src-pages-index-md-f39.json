@@ -1,0 +1,11 @@
+{
+  "type": "mdx",
+  "permalink": "/physical-ai-textbook/",
+  "source": "@site/src/pages/index.md",
+  "title": "Physical AI & Humanoid Robotics Textbook",
+  "description": "Welcome to the comprehensive textbook on Physical AI and Humanoid Robotics. This resource provides in-depth coverage of the field, from fundamental concepts to advanced applications.",
+  "frontMatter": {
+    "title": "Physical AI & Humanoid Robotics Textbook",
+    "hide_table_of_contents": true
+  }
+}

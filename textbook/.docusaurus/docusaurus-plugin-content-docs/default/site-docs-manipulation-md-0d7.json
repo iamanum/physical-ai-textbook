@@ -1,0 +1,32 @@
+{
+  "unversionedId": "manipulation",
+  "id": "manipulation",
+  "title": "Manipulation Systems in Humanoid Robots",
+  "description": "Understanding manipulation systems and control strategies in humanoid robots",
+  "source": "@site/docs/manipulation.md",
+  "sourceDirName": ".",
+  "slug": "/manipulation",
+  "permalink": "/physical-ai-textbook/docs/manipulation",
+  "draft": false,
+  "editUrl": "https://github.com/iamanum/physical-ai-textbook/edit/main/textbook/docs/manipulation.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1765974888,
+  "formattedLastUpdatedAt": "Dec 17, 2025",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_label": "Manipulation Systems",
+    "sidebar_position": 4,
+    "title": "Manipulation Systems in Humanoid Robots",
+    "description": "Understanding manipulation systems and control strategies in humanoid robots"
+  },
+  "sidebar": "textbookSidebar",
+  "previous": {
+    "title": "Locomotion Systems",
+    "permalink": "/physical-ai-textbook/docs/locomotion"
+  },
+  "next": {
+    "title": "Human-Robot Interaction",
+    "permalink": "/physical-ai-textbook/docs/hri"
+  }
+}

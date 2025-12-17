@@ -1,0 +1,267 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "loadedVersions": [
+        {
+          "versionName": "current",
+          "label": "Next",
+          "banner": null,
+          "badge": false,
+          "noIndex": false,
+          "className": "docs-version-current",
+          "path": "/physical-ai-textbook/docs",
+          "tagsPath": "/physical-ai-textbook/docs/tags",
+          "editUrl": "https://github.com/iamanum/physical-ai-textbook/edit/main/textbook/docs",
+          "editUrlLocalized": "https://github.com/iamanum/physical-ai-textbook/edit/main/textbook/i18n/en/docusaurus-plugin-content-docs/current",
+          "isLast": true,
+          "routePriority": -1,
+          "sidebarFilePath": "D:\\physical-ai-textbook\\physical-ai-textbook\\textbook\\sidebars.js",
+          "contentPath": "D:\\physical-ai-textbook\\physical-ai-textbook\\textbook\\docs",
+          "contentPathLocalized": "D:\\physical-ai-textbook\\physical-ai-textbook\\textbook\\i18n\\en\\docusaurus-plugin-content-docs\\current",
+          "docs": [
+            {
+              "unversionedId": "foundations",
+              "id": "foundations",
+              "title": "Foundations of Physical AI and Robotics",
+              "description": "Explore the foundational concepts of Physical AI and Robotics",
+              "source": "@site/docs/foundations.md",
+              "sourceDirName": ".",
+              "slug": "/foundations",
+              "permalink": "/physical-ai-textbook/docs/foundations",
+              "draft": false,
+              "editUrl": "https://github.com/iamanum/physical-ai-textbook/edit/main/textbook/docs/foundations.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_label": "Foundations",
+                "sidebar_position": 2,
+                "title": "Foundations of Physical AI and Robotics",
+                "description": "Explore the foundational concepts of Physical AI and Robotics"
+              },
+              "sidebar": "textbookSidebar",
+              "previous": {
+                "title": "Introduction",
+                "permalink": "/physical-ai-textbook/docs/introduction"
+              },
+              "next": {
+                "title": "Locomotion Systems",
+                "permalink": "/physical-ai-textbook/docs/locomotion"
+              }
+            },
+            {
+              "unversionedId": "hri",
+              "id": "hri",
+              "title": "Human-Robot Interaction and Social Robotics",
+              "description": "Understanding human-robot interaction principles and social robotics applications",
+              "source": "@site/docs/hri.md",
+              "sourceDirName": ".",
+              "slug": "/hri",
+              "permalink": "/physical-ai-textbook/docs/hri",
+              "draft": false,
+              "editUrl": "https://github.com/iamanum/physical-ai-textbook/edit/main/textbook/docs/hri.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 5,
+              "frontMatter": {
+                "sidebar_label": "Human-Robot Interaction",
+                "sidebar_position": 5,
+                "title": "Human-Robot Interaction and Social Robotics",
+                "description": "Understanding human-robot interaction principles and social robotics applications"
+              },
+              "sidebar": "textbookSidebar",
+              "previous": {
+                "title": "Manipulation Systems",
+                "permalink": "/physical-ai-textbook/docs/manipulation"
+              }
+            },
+            {
+              "unversionedId": "introduction",
+              "id": "introduction",
+              "title": "Introduction to Physical AI & Humanoid Robotics",
+              "description": "Learn about the fundamentals of Physical AI and Humanoid Robotics",
+              "source": "@site/docs/introduction.md",
+              "sourceDirName": ".",
+              "slug": "/introduction",
+              "permalink": "/physical-ai-textbook/docs/introduction",
+              "draft": false,
+              "editUrl": "https://github.com/iamanum/physical-ai-textbook/edit/main/textbook/docs/introduction.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_label": "Introduction",
+                "sidebar_position": 1,
+                "title": "Introduction to Physical AI & Humanoid Robotics",
+                "description": "Learn about the fundamentals of Physical AI and Humanoid Robotics"
+              },
+              "sidebar": "textbookSidebar",
+              "next": {
+                "title": "Introduction",
+                "permalink": "/physical-ai-textbook/docs/introduction"
+              }
+            },
+            {
+              "unversionedId": "locomotion",
+              "id": "locomotion",
+              "title": "Locomotion Systems in Humanoid Robots",
+              "description": "Understanding locomotion systems and control strategies in humanoid robots",
+              "source": "@site/docs/locomotion.md",
+              "sourceDirName": ".",
+              "slug": "/locomotion",
+              "permalink": "/physical-ai-textbook/docs/locomotion",
+              "draft": false,
+              "editUrl": "https://github.com/iamanum/physical-ai-textbook/edit/main/textbook/docs/locomotion.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "sidebar_label": "Locomotion Systems",
+                "sidebar_position": 3,
+                "title": "Locomotion Systems in Humanoid Robots",
+                "description": "Understanding locomotion systems and control strategies in humanoid robots"
+              },
+              "sidebar": "textbookSidebar",
+              "previous": {
+                "title": "Foundations",
+                "permalink": "/physical-ai-textbook/docs/foundations"
+              },
+              "next": {
+                "title": "Manipulation Systems",
+                "permalink": "/physical-ai-textbook/docs/manipulation"
+              }
+            },
+            {
+              "unversionedId": "manipulation",
+              "id": "manipulation",
+              "title": "Manipulation Systems in Humanoid Robots",
+              "description": "Understanding manipulation systems and control strategies in humanoid robots",
+              "source": "@site/docs/manipulation.md",
+              "sourceDirName": ".",
+              "slug": "/manipulation",
+              "permalink": "/physical-ai-textbook/docs/manipulation",
+              "draft": false,
+              "editUrl": "https://github.com/iamanum/physical-ai-textbook/edit/main/textbook/docs/manipulation.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "sidebar_label": "Manipulation Systems",
+                "sidebar_position": 4,
+                "title": "Manipulation Systems in Humanoid Robots",
+                "description": "Understanding manipulation systems and control strategies in humanoid robots"
+              },
+              "sidebar": "textbookSidebar",
+              "previous": {
+                "title": "Locomotion Systems",
+                "permalink": "/physical-ai-textbook/docs/locomotion"
+              },
+              "next": {
+                "title": "Human-Robot Interaction",
+                "permalink": "/physical-ai-textbook/docs/hri"
+              }
+            }
+          ],
+          "drafts": [],
+          "sidebars": {
+            "textbookSidebar": [
+              {
+                "type": "category",
+                "label": "Getting Started",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "introduction"
+                  }
+                ],
+                "link": {
+                  "type": "doc",
+                  "id": "introduction"
+                },
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Fundamentals",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "foundations"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Locomotion Systems",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "locomotion"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Manipulation Systems",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "manipulation"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Human-Robot Interaction",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "hri"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "docusaurus-plugin-content-pages": {
+    "default": [
+      {
+        "type": "jsx",
+        "permalink": "/physical-ai-textbook/",
+        "source": "@site/src/pages/index.js"
+      },
+      {
+        "type": "jsx",
+        "permalink": "/physical-ai-textbook/search",
+        "source": "@site/src/pages/search.js"
+      }
+    ]
+  },
+  "docusaurus-plugin-debug": {},
+  "docusaurus-theme-classic": {},
+  "@easyops-cn/docusaurus-search-local": {},
+  "docusaurus-bootstrap-plugin": {},
+  "docusaurus-mdx-fallback-plugin": {}
+}

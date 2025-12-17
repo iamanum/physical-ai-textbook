@@ -1,0 +1,49 @@
+{
+  "/physical-ai-textbook/search-d5c": {
+    "__comp": "18c5a93e",
+    "__context": {
+      "plugin": "7f55f431"
+    },
+    "config": "5e9f5e1a"
+  },
+  "/physical-ai-textbook/search-9b4": {
+    "__comp": "1a4e3797",
+    "__context": {
+      "plugin": "50f9a59d"
+    }
+  },
+  "/physical-ai-textbook/docs-7f2": {
+    "__comp": "1be78505",
+    "__context": {
+      "plugin": "01c2ed3d"
+    },
+    "versionMetadata": "935f2afb"
+  },
+  "/physical-ai-textbook/docs/foundations-5f6": {
+    "__comp": "17896441",
+    "content": "b15cc1c6"
+  },
+  "/physical-ai-textbook/docs/hri-616": {
+    "__comp": "17896441",
+    "content": "159ec506"
+  },
+  "/physical-ai-textbook/docs/introduction-6b1": {
+    "__comp": "17896441",
+    "content": "a09c2993"
+  },
+  "/physical-ai-textbook/docs/locomotion-886": {
+    "__comp": "17896441",
+    "content": "3841aa9c"
+  },
+  "/physical-ai-textbook/docs/manipulation-720": {
+    "__comp": "17896441",
+    "content": "0d7629ce"
+  },
+  "/physical-ai-textbook/-85f": {
+    "__comp": "c4f5d8e4",
+    "__context": {
+      "plugin": "7f55f431"
+    },
+    "config": "5e9f5e1a"
+  }
+}
