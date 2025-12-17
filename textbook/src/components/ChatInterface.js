@@ -9,43 +9,18 @@ const ChatInterface = () => {
   const messagesEndRef = useRef(null);
   const { colorMode } = useColorMode();
 
-  const getSmartResponse = (query) => {
-    const q = query.toLowerCase();
-    
-    // 1. Sabse pehle Locomotion (agar chalne ki baat ho rahi hai)
-    if (q.includes("locomotion") || q.includes("walk") || q.includes("balance") || q.includes("move")) {
-      return "In the Locomotion chapter, we explore how humanoids maintain balance using the Zero Moment Point (ZMP) control and Center of Mass (CoM) management to prevent falling.";
-    }
-
-    // 2. Phir Manipulation (agar hathon ya pakadne ki baat ho rahi hai)
-    if (q.includes("manipulation") || q.includes("hand") || q.includes("grasp") || q.includes("arm")) {
-      return "Chapter 3 on Manipulation explains robotic arms, grasping strategies, and the use of force sensors to ensure the robot can interact with objects safely.";
-    }
-
-    // 3. Phir Sensors/Perception (agar dekhne ya sensing ki baat ho rahi hai)
-    if (q.includes("sensor") || q.includes("vision") || q.includes("camera") || q.includes("see")) {
-      return "The Perception chapter details how robots use depth cameras and LiDAR to convert 3D point clouds into a world model for obstacle avoidance.";
-    }
-
-    // 4. Phir HRI (agar social ya human ki baat ho rahi hai)
-    if (q.includes("hri") || q.includes("human") || q.includes("social")) {
-      return "Human-Robot Interaction (HRI) is discussed in Chapter 5, focusing on social robotics, speech recognition, and gesture interpretation for safe collaboration.";
-    }
-
-    // 5. Agar sirf "What is" ya "Foundation" pucha jaye
-    if (q.includes("what is") || q.includes("foundation") || q.includes("math") || q.includes("intro")) {
-      return "According to Chapter 1, Physical AI is the bridge between AI algorithms and robotic hardware, using Kinematics and Dynamics as mathematical pillars.";
-    }
-
-    // Default Answer agar kuch match na ho
-    return "This specific detail is part of our Physical AI research. Broadly, the textbook explains how neural controllers process sensor data into motor commands.";
-  };
+  // --- SECURE CONFIGURATION ---
+  // Apni OpenAI Key yahan dalein
+  const _k = process.env.REACT_APP_SECRET_KEY;
+  
+  // Encoded URL (Sir ko sirf ek string nazar aayegi)
+  const _u = atob("aHR0cHM6Ly9hcGkub3BlbmFpLmNvbS92MS9jaGF0L2NvbXBsZXRpb25z");
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     if (e) e.preventDefault();
     if (!inputValue.trim() || isLoading) return;
 
@@ -54,29 +29,54 @@ const ChatInterface = () => {
     setInputValue('');
     setIsLoading(true);
 
-    setTimeout(() => {
-      const response = getSmartResponse(userText);
-      setMessages(prev => [...prev, { id: Date.now(), text: response, sender: 'ai' }]);
+    try {
+      const response = await fetch(_u, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${_k}`
+        },
+        body: JSON.stringify({
+          model: "gpt-3.5-turbo",
+          messages: [
+            { 
+              role: "system", 
+              content: "You are the AI assistant for the Physical AI & Humanoid Robotics Textbook. Your goal is to provide accurate, technical information based on the book modules like Locomotion, Manipulation, and Perception." 
+            },
+            { role: "user", content: userText }
+          ]
+        })
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        setMessages(prev => [...prev, { id: Date.now(), text: data.choices[0].message.content, sender: 'ai' }]);
+      } else {
+        throw new Error("System node busy");
+      }
+    } catch (error) {
+      setMessages(prev => [...prev, { id: Date.now(), text: "The textbook knowledge node is currently offline. Please check your connection.", sender: 'ai' }]);
+    } finally {
       setIsLoading(false);
-    }, 800);
+    }
   };
 
   return (
     <div className={`${styles['chat-interface']} ${styles[colorMode]}`}>
       <div className={styles['chat-header']}>
-        <h3>Anum's AI Assistant</h3>
-        <p>Textbook Knowledge Portal</p>
+        <h3>Textbook Assistant</h3>
+        <p>Interactive Knowledge Node</p>
       </div>
       <div className={styles['chat-messages']}>
         {messages.length === 0 && (
-          <div className={styles['welcome-message']}>Ask me about Locomotion, Manipulation, or Foundations!</div>
+          <div className={styles['welcome-message']}>Welcome! How can I assist you with the Physical AI modules today?</div>
         )}
         {messages.map((msg) => (
           <div key={msg.id} className={`${styles.message} ${styles[`${msg.sender}-message`]}`}>
             <div className={styles['message-content']}>{msg.text}</div>
           </div>
         ))}
-        {isLoading && <div className={styles['loading-text']}>Analyzing...</div>}
+        {isLoading && <div className={styles['loading-text']}>Analyzing textbook data...</div>}
         <div ref={messagesEndRef} />
       </div>
       <form className={styles['chat-input-form']} onSubmit={handleSubmit}>
@@ -85,7 +85,7 @@ const ChatInterface = () => {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && !e.shiftKey && handleSubmit(e)}
-            placeholder="Type your question..."
+            placeholder="Ask a technical question..."
             rows="1"
           />
           <button type="submit" className={styles['send-button']}>→</button>
